@@ -29,7 +29,7 @@ import json
 
 def TheRockLast():
     url = 'https://www.therocktrading.com/api/ticker/BTCEUR'
-    headers = {'content-type': 'application/json'}
+    headers = {'User-Agent': '@TheRockBot Telegram Bot', 'content-type': 'application/json'}
     r = requests.get(url, headers = headers)
     last = r.json()
     return last['result'][0]['last']

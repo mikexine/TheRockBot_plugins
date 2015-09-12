@@ -7,7 +7,7 @@ fund  = 'btceur'
 
 def TheRockData(fund):
     url = 'https://www.therocktrading.com/api/ticker/'+fund.upper()
-    headers = {'content-type': 'application/json'}
+    headers = {'User-Agent': '@TheRockBot Telegram Bot', 'content-type': 'application/json'}
     r = requests.get(url, headers = headers)
     data = r.json()
     bid = data['result'][0]['bid']
